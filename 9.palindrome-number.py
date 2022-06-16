@@ -11,47 +11,19 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
+        if x < 0: return False
         
+        div = 1
+        while x >= div * 10:
+            div *= 10
+        
+        while x:
+            right = x % 10
+            left = x // div
+            if left != right: return False
+            
+            x = (x % div) // 10
+            div /= 100
+        
+        return True
 # @lc code=end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # if x < 0: return False
-        
-        # if x != 0 and x % 10 == 0: return False
-        
-        # digit = x
-        # reverse = 0
-        # while digit != 0:
-        #     reverse = reverse * 10 + digit % 10
-        #     digit //= 10
-        
-        # if reverse == x:
-        #     return True
-        
-        # return False
