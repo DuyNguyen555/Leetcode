@@ -11,40 +11,13 @@ class Solution(object):
         :type wordtrword: Liwordt[wordtr]
         :rtype: wordtr
         """
+        result = ""
+        for i in range(len(strs[0])):
+            for word in strs:
+                if i == len(word) or word[i] != strs[0][i]:
+                    return result
+                
+            result += strs[0][i]
         
+        return result
 # @lc code=end
-
-# if __name__ =="__main__":
-#     char = Solution()
-#     liword = ["abc", "ab"]
-#     print(char.longestCommonPrefix(liword))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # result = ""
-        # for i in range(len(strs[0])):
-        #     for word in strs:
-        #         if i == len(word) or word[i] != strs[0][i]:
-        #             return result
-        #     result += strs[0][i]
-        # return result

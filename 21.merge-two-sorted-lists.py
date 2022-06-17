@@ -20,7 +20,6 @@ class Solution(object):
         """
         dummy = ListNode()
         current = dummy
-        
         while list1 and list2:
             if list1.val < list2.val:
                 current.next = list1
@@ -28,7 +27,6 @@ class Solution(object):
             else:
                 current.next = list2
                 list2 = list2.next
-            
             current = current.next
         
         if list1:
@@ -38,47 +36,3 @@ class Solution(object):
         
         return dummy.next
 # @lc code=end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # dummy = ListNode()
-        # current = dummy
-        # while list1 and list2:
-        #     if list1.val < list2.val:
-        #         current.next = list1
-        #         list1 = list1.next
-        #     else:
-        #         current.next = list2
-        #         list2 = list2.next
-        #     current = current.next
-        
-        # if list1:
-        #     current.next = list1
-        # elif list2:
-        #     current.next = list2
-        
-        # return dummy.next
