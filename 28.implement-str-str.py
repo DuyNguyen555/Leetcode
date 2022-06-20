@@ -12,42 +12,18 @@ class Solution(object):
         :type needle: str
         :rtype: int
         """
+        if needle == "": return 0
         
-            
+        if needle in haystack:
+            return haystack.index(needle)
+        
+        return -1
+    
+    def strStr(self, haystack, needle):
+        if needle == "": return 0
+        for i in range(len(haystack) - len(needle) + 1):
+            if haystack[i: i+ len(needle)] == needle:
+                return i
+        
+        return -1
 # @lc code=end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-        
-        
-        
-        # Case 1:
-        # O(n)
-        # if needle == "":
-        #     return 0
-        
-        # for i in range(len(haystack) - len(needle) + 1):
-        #         if haystack[i: i + len(needle)] == needle:
-        #             return i
-        # return -1
-
-        # Case 2:
-        # if needle == "":
-        #     return 0
-        # if needle in haystack:
-        #     return haystack.index(needle)
-        # return -1

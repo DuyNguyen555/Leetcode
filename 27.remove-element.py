@@ -12,33 +12,11 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
+        left = 0
+        for right in range(len(nums)):
+            if nums[right] != val:
+                nums[left] = nums[right]
+                left += 1
         
+        return left
 # @lc code=end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # key = 0
-        # for i in range(len(nums)):
-        #     if nums[i] != val:
-        #         nums[key] = nums[i]
-        #         key += 1
-        
-        # return key

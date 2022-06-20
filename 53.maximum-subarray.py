@@ -11,49 +11,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        maxSub = nums[0]
-        curmax = 0
+        MaxSub = nums[0]
+        cur = 0
         for i in nums:
-            if curmax < 0:
-                curmax = 0
-            
-            curmax += i
-            maxSub = max(curmax, maxSub)
+            if cur < 0:
+                cur = 0
+            cur += i
+            MaxSub = max(MaxSub, cur)
         
-        return maxSub
+        return MaxSub
 # @lc code=end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # 
-        # maxSub = nums[0]
-        # curmax = 0
-        # for n in nums:
-        #     if curmax < 0:
-        #         curmax = 0
-        #     curmax += n
-        #     maxSub = max(maxSub, curmax)
-
-        # return maxSub
